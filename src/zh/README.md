@@ -100,7 +100,7 @@ features:
     details: 包括图标支持、全屏按钮、返回顶部按钮等
     link: https://theme-hope.vuejs.press/zh/guide/feature/
 copyright: false
-footer: 使用 <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a> 主题 | MIT 协议, 版权所有 © 2019-present Mr.Hope
+footer: 使用 <a href="https://theme-hope.vuejs.press/" target="_blank">VuePress Theme Hope</a> 主题,version - <span class="myDocs_version">0.0.0</span> 版权所有 © 2023-3
 ---
 
 这是项目主页的案例。你可以在这里放置你的主体内容。
@@ -108,3 +108,14 @@ footer: 使用 <a href="https://theme-hope.vuejs.press/" target="_blank">VuePres
 想要使用此布局，你需要在页面 front matter 中设置 `home: true`。
 
 配置项的相关说明详见 [项目主页配置](https://theme-hope.vuejs.press/zh/guide/layout/home/)。
+
+<script setup>
+import { onMounted, h } from 'vue'
+import {addReleaseTag} from '@src/utils/addReleaseTag'
+
+onMounted(() => {
+  addReleaseTag()
+})
+
+console.log("🚀 ~", process.env.NODE_ENV)
+</script>

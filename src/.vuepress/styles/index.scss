@@ -1,11 +1,15 @@
 // place your custom styles here
 @import './mystyle/variable.scss';
-
+html[data-theme='dark'] {
+  --navbar-bg-color: rgba(22, 22, 24, 0.3) !important;
+  --sidebar-bg-color: rgba(22, 22, 24, 0.5) !important;
+}
 #navbar {
   //backdrop-filter属性可以让你为一个元素后面区域添加图形效果（如模糊或颜色偏移）。 因为它适用于元素背后的所有元素，为了看到效果，必须使元素或其背景至少部分透明。
   backdrop-filter: saturate(150%) blur(1px);
 }
 
+// ----首页的
 .hero-info-wrapper {
   // 英雄图样式
   & > img {
@@ -27,5 +31,18 @@
     -moz-transform: scale(1.02) !important;
     -ms-transform: scale(1.02) !important;
     -o-transform: scale(1.02) !important;
+  }
+}
+.footer-wrapper {
+  .myDocs_version {
+    color: var(--theme-color);
+    font-weight: 600;
+  }
+}
+// 首页的----
+// --- 每个文档的
+#main-content {
+  .theme-hope-content figure > img {
+    border: 1px solid #f1f1f1;
   }
 }

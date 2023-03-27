@@ -4,13 +4,21 @@ import { zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
+  // sidebar: 'heading', //https://theme-hope.vuejs.press/zh/guide/layout/sidebar.html#%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E4%BE%A7%E8%BE%B9%E6%A0%8F
+  //当前网站部署到的域名
   hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
-
+  // 站点图标
+  favicon: "/images/favicon/favicon.ico",
   author: {
-    name: "Mr.Hope",
-    url: "https://mrhope.site",
+    name: "lys",
+    url: "https://github.com/lyszxm/my-docs", //作者网站
+    /**
+     * 作者 Email
+     */
+    email: "1774795243@qq.com",
   },
-
+  hotReload: false, // 是否需要在开发服务器启用完整功能与热更新。 是否在开发服务器中启用热重载。
+  // pure: true, //是否开启纯净模式。
   iconAssets: "iconfont",
   fullscreen: true, //如果你需要这个功能，你可以在主题选项中设置 fullscreen: true。
   themeColor: {
@@ -22,7 +30,7 @@ export default hopeTheme({
 
   logo: "https://tse3-mm.cn.bing.net/th/id/OIP-C.ZlKootImGh6akA6hjzV6RAHaGF?w=223&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7", //导航栏图标，应为基于 .vuepress/public 文件夹的绝对路径。
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope", //仓库配置，用于在导航栏中显示仓库链接。
+  repo: "lyszxm/my-docs", //仓库配置，用于在导航栏中显示仓库链接。
   // repo: "https://github.com/Mister-Hope/Mister-Hope.github.io",
   docsDir: "src", //文档在仓库中的目录
 
@@ -53,9 +61,10 @@ export default hopeTheme({
       // sidebar
       sidebar: zhSidebar,
 
-      footer: "默认页脚",
+      footer: "默认页脚", //页脚的默认内容，可输入 HTMLString。
 
       displayFooter: true,
+      // rtl: true,
 
       // page meta
       metaLocales: {
@@ -72,6 +81,7 @@ export default hopeTheme({
   },
 
   plugins: {
+    photoSwipe: true,
     // comment: {
     //   // provider: "Waline",   // @ts-expect-error You should generate and use your own comment service您应该生成并使用自己的评论服务
     //   provider: 'None'

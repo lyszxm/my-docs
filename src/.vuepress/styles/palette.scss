@@ -22,6 +22,11 @@ $border-color: (
 );
 */
 $bg-color: (
-  light: rgba(#f9f9f9, 1),
-  dark: rgba(#333, .9)
+  light: rgba(#fffff9, 0.9),
+  dark: rgba(#333, 0.9)
+);
+//另一个浅背景色
+$bg-color-secondary: (
+  light: #f0f0f0,
+  dark: #161b22
 );
