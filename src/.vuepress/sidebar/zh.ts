@@ -44,6 +44,18 @@ export const zhSidebar = sidebar({
       fileIcon: "blog",
       collapsible: true,
     }),
+    getCatalogueByPath("zh/spring", {
+      cateIcon: "java-script",
+      isLink: true,
+      fileIcon: "blog",
+      collapsible: true,
+    }),
+    getCatalogueByPath("zh/node-js", {
+      cateIcon: "nodeJS",
+      isLink: true,
+      fileIcon: "blog",
+      collapsible: true,
+    }),
     {
       icon: "discover", //项目图标
       text: "案例", //项目文字

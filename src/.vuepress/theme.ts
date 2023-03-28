@@ -2,13 +2,14 @@ import { hopeTheme } from "vuepress-theme-hope";
 // import { enNavbar, zhNavbar } from './navbar/index.js'
 import { zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
-
 export default hopeTheme({
   // sidebar: 'heading', //https://theme-hope.vuejs.press/zh/guide/layout/sidebar.html#%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E4%BE%A7%E8%BE%B9%E6%A0%8F
   //当前网站部署到的域名
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://lyszxm.github.io/my-docs/",
   // 站点图标
   favicon: "/images/favicon/favicon.ico",
+  // iconAssets: '//at.alicdn.com/t/c/font_3980836_hxbglioa3hw.css',
+  iconAssets: "iconfont",
   author: {
     name: "lys",
     url: "https://github.com/lyszxm/my-docs", //作者网站
@@ -17,9 +18,8 @@ export default hopeTheme({
      */
     email: "1774795243@qq.com",
   },
-  hotReload: false, // 是否需要在开发服务器启用完整功能与热更新。 是否在开发服务器中启用热重载。
+  // hotReload: true, // 是否需要在开发服务器启用完整功能与热更新。 是否在开发服务器中启用热重载。
   // pure: true, //是否开启纯净模式。
-  iconAssets: "iconfont",
   fullscreen: true, //如果你需要这个功能，你可以在主题选项中设置 fullscreen: true。
   themeColor: {
     blue: "#2196f3",
@@ -42,7 +42,7 @@ export default hopeTheme({
       // sidebar
       sidebar: enSidebar,
 
-      footer: "Default footer",
+      footer: "Default footer~ ~ ~🎃",
 
       displayFooter: true,
 
@@ -61,7 +61,7 @@ export default hopeTheme({
       // sidebar
       sidebar: zhSidebar,
 
-      footer: "默认页脚", //页脚的默认内容，可输入 HTMLString。
+      footer: "努力基建中~ ~ ~🎃", //页脚的默认内容，可输入 HTMLString。
 
       displayFooter: true,
       // rtl: true,
@@ -129,7 +129,6 @@ export default hopeTheme({
       vPre: true,
       vuePlayground: true,
     },
-
     // uncomment these if you want a pwa
     // pwa: {
     //   favicon: "/favicon.ico",

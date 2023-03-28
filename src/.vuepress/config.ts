@@ -1,12 +1,16 @@
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { path } from "@vuepress/utils";
+import { componentsPlugin } from "vuepress-plugin-components";
 import theme from "./theme.js";
-console.log(import.meta.url);
+
 import { searchPlugin } from "@vuepress/plugin-search"; //@vuepress/plugin-search 为你的文档网站提供本地搜索能力。
 import { docsearchPlugin } from "@vuepress/plugin-docsearch"; //将 Algolia DocSearch 集成到 VuePress 中，为你的文档网站提供搜索功能。
 import { searchProPlugin } from "vuepress-plugin-search-pro";
+const IS_NETLIFY = "NETLIFY" in process.env;
 console.log(path.resolve(__dirname, "../../src"), "-----");
+console.log(import.meta.url, IS_NETLIFY);
+// console.log(process.env)
 
 export default defineUserConfig({
   bundler: viteBundler({
@@ -180,6 +184,57 @@ export default defineUserConfig({
       queryHistoryCount: 5, //存储搜索查询词历史的最大数量，可以设置为 0 以禁用。
       resultHistoryCount: 5, // 存储搜索结果历史的最大数量，可以设置为 0 以禁用。
       worker: "search-pro.worker.js", //输出的 Worker 文件名称
+    }),
+    componentsPlugin({
+      components: [
+        // 'ArtPlayer',
+        // 'AudioPlayer',
+        // 'Badge',
+        // 'BiliBili',
+        "CodePen",
+        "FontIcon",
+        "PDF",
+        // 'Replit',
+        // 'Share',
+        // 'SiteInfo',
+        // 'StackBlitz',
+        // 'VideoPlayer',
+        // 'XiGua',
+        // 'YouTube'
+      ],
+      componentOptions: {
+        fontIcon: {
+          assets: [
+            "//at.alicdn.com/t/c/font_3980836_hxbglioa3hw.css",
+            "iconfont",
+          ],
+          // assets: 'iconfont'
+          prefix: "iconfont icon-", //这个前缀就是和你的iconfont的项目设置有关的额
+        },
+        pdf: {
+          pdfjs: "/assets/lib/pdfjs",
+        },
+      },
+      rootComponents: {
+        // addThis: 'ra-6421a080e9ef3860',
+        backToTop: true,
+        notice: [
+          {
+            match: /^\/$/,
+            title: "通知",
+            content: "Notice Content",
+            actions: [
+              {
+                text: "Primary Action",
+                link: "https://theme-hope.vuejs.press/",
+                type: "primary",
+              },
+              { text: "Default Action" },
+            ],
+            fullscreen: true,
+          },
+        ],
+      },
     }),
   ],
   // Enable it with pwa
