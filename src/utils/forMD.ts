@@ -28,7 +28,7 @@ export function getCatalogueByPath(
     });
     // console.log(val)
 
-    // console.log('000000', path + `\t\t`, thisDir, thisMd)
+    console.log("000000", path + `\t\t`, thisDir, thisMd);
     // console.log(thisDir, '88', thisMd)
 
     if (thisMd.length > 0) {
@@ -36,9 +36,11 @@ export function getCatalogueByPath(
         if (md == "README.md") continue;
         val.children.push({
           icon: tempObj.fileIcon || "",
-          text: md.split(".")[0] || "",
-          prefix: md.split(".")[0] + "/" || "", // 'mk_ts/',
-          link: tempObj.isLink ? md.split(".")[0] + "/" : "", //给它就是可以点击了
+          text: md.split(/([\w.\u4e00-\u9fa5]+)\.(md|MD)$/)[1] || "",
+          prefix: md.split(/([\w.\u4e00-\u9fa5]+)\.(md|MD)$/)[1] + "/" || "", // 'mk_ts/',
+          link: tempObj.isLink
+            ? md.split(/([\w.\u4e00-\u9fa5]+)\.(md|MD)$/)[1] + "/"
+            : "", //给它就是可以点击了
           collapsible: tempObj.collapsible,
         });
       }

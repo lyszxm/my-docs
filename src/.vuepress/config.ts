@@ -13,6 +13,13 @@ console.log(import.meta.url, IS_NETLIFY);
 // console.log(process.env)
 
 export default defineUserConfig({
+  markdown: {
+    importCode: {
+      handleImportPath: (str) =>
+        str.replace(/^@src/, path.resolve(__dirname, "../../src")),
+    },
+  },
+  pagePatterns: ["**/*.md", "!.vuepress", "!node_modules"], //默认值： ['**/*.md', '!.vuepress', '!node_modules'] //指定页面文件的 Patterns 。这些 Patterns 是相对于 Source 目录的
   bundler: viteBundler({
     viteOptions: {
       server: {

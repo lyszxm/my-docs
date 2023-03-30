@@ -1,4 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
+
+import { path } from "@vuepress/utils";
 // import { enNavbar, zhNavbar } from './navbar/index.js'
 import { zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
@@ -100,7 +102,14 @@ export default hopeTheme({
       gfm: true,
       imgLazyload: true,
       imgSize: true,
-      include: true,
+      // 添加 `@src` 别名支持
+      include: {
+        resolvePath: (file) => {
+          if (file.startsWith("@src"))
+            return file.replace("@src", path.resolve(__dirname, "../../src"));
+          return file;
+        },
+      }, //导入文件 https://plugin-md-enhance.vuejs.press/zh/guide/include.html
       katex: true,
       mark: true,
       mermaid: true,

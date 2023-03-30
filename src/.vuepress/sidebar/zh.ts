@@ -56,6 +56,7 @@ export const zhSidebar = sidebar({
       fileIcon: "blog",
       collapsible: true,
     }),
+
     {
       icon: "discover", //项目图标
       text: "案例", //项目文字
