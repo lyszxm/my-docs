@@ -138,6 +138,58 @@ export default hopeTheme({
       vPre: true,
       vuePlayground: true,
     },
+
+    components: {
+      components: [
+        // 'ArtPlayer',
+        // 'AudioPlayer',
+        // 'Badge',
+        // 'BiliBili',
+        "CodePen",
+        "FontIcon",
+        "PDF",
+        // 'Replit',
+        // 'Share',
+        // 'SiteInfo',
+        // 'StackBlitz',
+        // 'VideoPlayer',
+        // 'XiGua',
+        // 'YouTube'
+      ],
+      componentOptions: {
+        fontIcon: {
+          assets: [
+            "//at.alicdn.com/t/c/font_3980836_hxbglioa3hw.css",
+            "iconfont",
+          ],
+          // assets: 'iconfont'
+          prefix: "iconfont icon-", //这个前缀就是和你的iconfont的项目设置有关的额
+        },
+        pdf: {
+          pdfjs: "/assets/lib/pdfjs",
+        },
+      },
+      rootComponents: {
+        // addThis: 'ra-6421a080e9ef3860',
+        backToTop: true,
+        notice: [
+          {
+            match: /^\/$/,
+            title: "通知",
+            content: "Notice Content",
+            actions: [
+              {
+                text: "Primary Action",
+                link: "https://theme-hope.vuejs.press/",
+                type: "primary",
+              },
+              { text: "Default Action" },
+            ],
+            fullscreen: true,
+          },
+        ],
+      },
+    },
     // uncomment these if you want a pwa
     // pwa: {
     //   favicon: "/favicon.ico",

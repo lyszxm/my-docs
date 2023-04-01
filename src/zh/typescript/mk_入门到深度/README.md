@@ -135,6 +135,7 @@ const { charging, level } = useBattery();
 
 
 @[code md](./demo.snippet.md)
+@[code ts](./1.ts)
 @[code md](@src/zh/typescript/mk_入门到深度/demo.snippet.md)
 
 

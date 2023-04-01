@@ -1,0 +1,36 @@
+Arguments: 
+  D:\Software\nodejs\node.exe D:\Software\jsBag_modules\npm\node_global\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Users\86132\.console-ninja\.bin;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\dotnet\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Program Files\Java\jdk-13\bin;D:\Program Files\java 241\bin;C:\Program Files\Azure Data Studio\bin;D:\Program Files\MongoDB\bin;D:\Software\phpstudy_pro\Extensions\MySQL5.7.26\bin;D:\software 3\Python 3.8;D:\Program Files\Git\cmd;D:\Program Files\python-2.7.10;D:\Program Files\Redis-x64-5.0.10;D:\software 4\Rose\common;C:\Users\86132\.windows-build-tools\python27\;D:\Software\Cocos2d-x\Cocos2d-x-3.10\templates;D:\Software\Cocos2d-x\Cocos2d-x-3.10\tools\cocos2d-console\bin;D:\software 3\Python 3.8\Scripts\;D:\software 3\Python 3.8\;C:\Users\86132\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\86132\AppData\Local\Programs\Python\Python38\;C:\Users\86132\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Java\jdk-13\bin;C:\Program Files\Bandizip\;D:\software 3\WebStorm 2020.1\bin;D:\software 3\IntelliJ IDEA 2020.1\bin;C:\Program Files\Azure Data Studio\bin;C:\Users\86132\AppData\Local\Programs\Microsoft VS Code\bin;D:\Software\jsBag_modules\npm\node_global;C:\Users\86132\AppData\Roaming\npm;D:\Program Files\apache-tomcat-8.5.13-windows-x64\apache-tomcat-8.5.13\bin;D:\Program Files\apache-tomcat-8.5.13-windows-x64\apache-tomcat-8.5.13\lib;D:\Software\phpstudy_pro\Extensions\nginx-1.22.1;D:\Program Files\Java\apache-maven-3.6.3\apache-maven-3.6.3\bin;D:\Software\nvm;D:\Software\nodejs;D:\Software\jsBag_modules\Yarn\global\node_modules\.bin;C:\ProgramData\chocolatey\bin;D:\Program Files\Git\cmd;;D:\software5\vscode\Microsoft VS Code\bin;C:\Users\86132\.console-ninja\.bin;C:\Users\86132\AppData\Local\pnpm;C:\Users\86132\.windows-build-tools\python27\;D:\Software\Cocos2d-x\Cocos2d-x-3.10\templates;D:\Software\Cocos2d-x\Cocos2d-x-3.10\tools\cocos2d-console\bin;D:\software 3\Python 3.8\Scripts\;D:\software 3\Python 3.8\;C:\Users\86132\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\86132\AppData\Local\Programs\Python\Python38\;C:\Users\86132\AppData\Local\Microsoft\WindowsApps;D:\Program Files\Java\jdk-13\bin;C:\Program Files\Bandizip\;D:\software 3\WebStorm 2020.1\bin;D:\software 3\IntelliJ IDEA 2020.1\bin;C:\Program Files\Azure Data Studio\bin;D:\Software\nodejs\node_global;C:\Users\86132\AppData\Roaming\npm;C:\Users\86132\AppData\Local\Pandoc\;D:\Software\nvm;D:\Software\nodejs;D:\software5\Fiddler;D:\Software\nvm;D:\Software\nodejs;
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.18.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (D:\Software\jsBag_modules\npm\node_global\node_modules\yarn\lib\cli.js:137150:13)
+      at Interface.emit (node:events:513:28)
+      at Interface._ttyWrite (node:readline:1085:16)
+      at ReadStream.onkeypress (node:readline:291:10)
+      at ReadStream.emit (node:events:513:28)
+      at emitKeys (node:internal/readline/utils:357:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (node:internal/readline/emitKeypressEvents:61:36)
+      at ReadStream.emit (node:events:513:28)
+      at addChunk (node:internal/streams/readable:315:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

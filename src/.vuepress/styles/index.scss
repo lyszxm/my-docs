@@ -1,5 +1,22 @@
 // place your custom styles here
 @import './mystyle/variable.scss';
+
+// 设置滚动栏样式
+body {
+  .theme-hope-content div[class*='language-'] {
+    ::-webkit-scrollbar {
+      width: 8px !important;
+      cursor: pointer !important;
+      height: 10px !important;
+    }
+  }
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+
+
 html[data-theme='dark'] {
   --navbar-bg-color: rgba(22, 22, 24, 0.3) !important;
   --sidebar-bg-color: rgba(22, 22, 24, 0.5) !important;

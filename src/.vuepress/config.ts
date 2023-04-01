@@ -1,7 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { path } from "@vuepress/utils";
-import { componentsPlugin } from "vuepress-plugin-components";
 import theme from "./theme.js";
 
 import { searchPlugin } from "@vuepress/plugin-search"; //@vuepress/plugin-search 为你的文档网站提供本地搜索能力。
@@ -19,6 +18,7 @@ export default defineUserConfig({
         str.replace(/^@src/, path.resolve(__dirname, "../../src")),
     },
   },
+  // public: `${sourceDir}/.vuepress/public`, //默认值： `${sourceDir}/.vuepress/public`  //指定 Public 文件目录。
   pagePatterns: ["**/*.md", "!.vuepress", "!node_modules"], //默认值： ['**/*.md', '!.vuepress', '!node_modules'] //指定页面文件的 Patterns 。这些 Patterns 是相对于 Source 目录的
   bundler: viteBundler({
     viteOptions: {
@@ -63,186 +63,136 @@ export default defineUserConfig({
 
   theme,
   plugins: [
-    docsearchPlugin({
-      appId: "LDBQGQC8Q9",
-      apiKey: "5c3a7145aeba231c3b85b742d24fc24f",
-      indexName: "mrhope",
-      locales: {
-        "/": {
-          placeholder: "搜索",
-          translations: {
-            button: {
-              buttonText: "搜索",
-              buttonAriaLabel: "搜索",
-            },
-            modal: {
-              searchBox: {
-                resetButtonTitle: "清除查询条件",
-                resetButtonAriaLabel: "清除查询条件",
-                cancelButtonText: "取消",
-                cancelButtonAriaLabel: "取消",
-              },
-              startScreen: {
-                recentSearchesTitle: "搜索历史",
-                noRecentSearchesText: "没有搜索历史!",
-                saveRecentSearchButtonTitle: "保存至搜索历史",
-                removeRecentSearchButtonTitle: "从搜索历史中移除",
-                favoriteSearchesTitle: "收藏",
-                removeFavoriteSearchButtonTitle: "从收藏中移除",
-              },
-              errorScreen: {
-                titleText: "无法获取结果",
-                helpText: "你可能需要检查你的网络连接",
-              },
-              footer: {
-                selectText: "选择",
-                navigateText: "切换",
-                closeText: "关闭",
-                searchByText: "搜索提供者",
-              },
-              noResultsScreen: {
-                noResultsText: "无法找到相关结果",
-                suggestedQueryText: "你可以尝试查询",
-                reportMissingResultsText: "你认为该查询应该有结果？",
-                reportMissingResultsLinkText: "点击反馈",
-              },
-            },
-          },
-        },
-        "/zh/": {
-          placeholder: "搜索",
-          translations: {
-            button: {
-              buttonText: "搜索",
-              buttonAriaLabel: "搜索",
-            },
-            modal: {
-              searchBox: {
-                resetButtonTitle: "清除查询条件",
-                resetButtonAriaLabel: "清除查询条件",
-                cancelButtonText: "取消",
-                cancelButtonAriaLabel: "取消",
-              },
-              startScreen: {
-                recentSearchesTitle: "搜索历史",
-                noRecentSearchesText: "没有搜索历史!",
-                saveRecentSearchButtonTitle: "保存至搜索历史",
-                removeRecentSearchButtonTitle: "从搜索历史中移除",
-                favoriteSearchesTitle: "收藏",
-                removeFavoriteSearchButtonTitle: "从收藏中移除",
-              },
-              errorScreen: {
-                titleText: "无法获取结果",
-                helpText: "你可能需要检查你的网络连接",
-              },
-              footer: {
-                selectText: "选择",
-                navigateText: "切换",
-                closeText: "关闭",
-                searchByText: "搜索提供者",
-              },
-              noResultsScreen: {
-                noResultsText: "无法找到相关结果",
-                suggestedQueryText: "你可以尝试查询",
-                reportMissingResultsText: "你认为该查询应该有结果？",
-                reportMissingResultsLinkText: "点击反馈",
-              },
-            },
-          },
-        },
-      },
-    }),
-    searchPlugin({
-      // 你的选项
-      locales: {
-        "/": {
-          placeholder: "search",
-        },
-        "/zh/": {
-          placeholder: "搜索",
-        },
-      }, // 排除首页
-      isSearchable: (page) => {
-        // console.log(page)
-        return page.path !== "/";
-      },
-    }),
-    searchProPlugin({
-      // 索引全部内容(默认情况下，插件只会索引页面的标题和摘要以及你的自定义索引项，不会索引页面的正文内容。如果需要索引页面的正文内容，可以将该选项设置为 true。)
-      indexContent: true,
-      // 为分类和标签添加索引
-      customFields: [
-        {
-          getter: (page) => page.frontmatter.category,
-          formatter: {
-            "/": "Category: $content",
-            "/zh/": "分类：$content",
-          },
-        },
-        {
-          getter: (page) => page.frontmatter.tag,
-          formatter: {
-            "/": "Tag: $content",
-            "/zh/": "标签：$content",
-          },
-        },
-      ],
-      hotKeys: [{ key: "k", ctrl: true }], //https://plugin-search-pro.vuejs.press/zh/config.html#hotkeys  //当热键被按下时，搜索框的输入框会被聚焦，设置为空数组以禁用热键。
-      queryHistoryCount: 5, //存储搜索查询词历史的最大数量，可以设置为 0 以禁用。
-      resultHistoryCount: 5, // 存储搜索结果历史的最大数量，可以设置为 0 以禁用。
-      worker: "search-pro.worker.js", //输出的 Worker 文件名称
-    }),
-    componentsPlugin({
-      components: [
-        // 'ArtPlayer',
-        // 'AudioPlayer',
-        // 'Badge',
-        // 'BiliBili',
-        "CodePen",
-        "FontIcon",
-        "PDF",
-        // 'Replit',
-        // 'Share',
-        // 'SiteInfo',
-        // 'StackBlitz',
-        // 'VideoPlayer',
-        // 'XiGua',
-        // 'YouTube'
-      ],
-      componentOptions: {
-        fontIcon: {
-          assets: [
-            "//at.alicdn.com/t/c/font_3980836_hxbglioa3hw.css",
-            "iconfont",
-          ],
-          // assets: 'iconfont'
-          prefix: "iconfont icon-", //这个前缀就是和你的iconfont的项目设置有关的额
-        },
-        pdf: {
-          pdfjs: "/assets/lib/pdfjs",
-        },
-      },
-      rootComponents: {
-        // addThis: 'ra-6421a080e9ef3860',
-        backToTop: true,
-        notice: [
-          {
-            match: /^\/$/,
-            title: "通知",
-            content: "Notice Content",
-            actions: [
-              {
-                text: "Primary Action",
-                link: "https://theme-hope.vuejs.press/",
-                type: "primary",
-              },
-              { text: "Default Action" },
-            ],
-            fullscreen: true,
-          },
-        ],
-      },
-    }),
+    // componentsPlugin(),
+    // docsearchPlugin({
+    //   appId: 'LDBQGQC8Q9',
+    //   apiKey: '5c3a7145aeba231c3b85b742d24fc24f',
+    //   indexName: 'mrhope',
+    //   locales: {
+    //     '/': {
+    //       placeholder: '搜索',
+    //       translations: {
+    //         button: {
+    //           buttonText: '搜索',
+    //           buttonAriaLabel: '搜索'
+    //         },
+    //         modal: {
+    //           searchBox: {
+    //             resetButtonTitle: '清除查询条件',
+    //             resetButtonAriaLabel: '清除查询条件',
+    //             cancelButtonText: '取消',
+    //             cancelButtonAriaLabel: '取消'
+    //           },
+    //           startScreen: {
+    //             recentSearchesTitle: '搜索历史',
+    //             noRecentSearchesText: '没有搜索历史!',
+    //             saveRecentSearchButtonTitle: '保存至搜索历史',
+    //             removeRecentSearchButtonTitle: '从搜索历史中移除',
+    //             favoriteSearchesTitle: '收藏',
+    //             removeFavoriteSearchButtonTitle: '从收藏中移除'
+    //           },
+    //           errorScreen: {
+    //             titleText: '无法获取结果',
+    //             helpText: '你可能需要检查你的网络连接'
+    //           },
+    //           footer: {
+    //             selectText: '选择',
+    //             navigateText: '切换',
+    //             closeText: '关闭',
+    //             searchByText: '搜索提供者'
+    //           },
+    //           noResultsScreen: {
+    //             noResultsText: '无法找到相关结果',
+    //             suggestedQueryText: '你可以尝试查询',
+    //             reportMissingResultsText: '你认为该查询应该有结果？',
+    //             reportMissingResultsLinkText: '点击反馈'
+    //           }
+    //         }
+    //       }
+    //     },
+    //     '/zh/': {
+    //       placeholder: '搜索',
+    //       translations: {
+    //         button: {
+    //           buttonText: '搜索',
+    //           buttonAriaLabel: '搜索'
+    //         },
+    //         modal: {
+    //           searchBox: {
+    //             resetButtonTitle: '清除查询条件',
+    //             resetButtonAriaLabel: '清除查询条件',
+    //             cancelButtonText: '取消',
+    //             cancelButtonAriaLabel: '取消'
+    //           },
+    //           startScreen: {
+    //             recentSearchesTitle: '搜索历史',
+    //             noRecentSearchesText: '没有搜索历史!',
+    //             saveRecentSearchButtonTitle: '保存至搜索历史',
+    //             removeRecentSearchButtonTitle: '从搜索历史中移除',
+    //             favoriteSearchesTitle: '收藏',
+    //             removeFavoriteSearchButtonTitle: '从收藏中移除'
+    //           },
+    //           errorScreen: {
+    //             titleText: '无法获取结果',
+    //             helpText: '你可能需要检查你的网络连接'
+    //           },
+    //           footer: {
+    //             selectText: '选择',
+    //             navigateText: '切换',
+    //             closeText: '关闭',
+    //             searchByText: '搜索提供者'
+    //           },
+    //           noResultsScreen: {
+    //             noResultsText: '无法找到相关结果',
+    //             suggestedQueryText: '你可以尝试查询',
+    //             reportMissingResultsText: '你认为该查询应该有结果？',
+    //             reportMissingResultsLinkText: '点击反馈'
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }),
+    // searchPlugin({
+    //   // 你的选项
+    //   locales: {
+    //     '/': {
+    //       placeholder: 'search'
+    //     },
+    //     '/zh/': {
+    //       placeholder: '搜索'
+    //     }
+    //   }, // 排除首页
+    //   isSearchable: page => {
+    //     // console.log(page)
+    //     return page.path !== '/'
+    //   }
+    // }),
+    // searchProPlugin({
+    //   // 索引全部内容(默认情况下，插件只会索引页面的标题和摘要以及你的自定义索引项，不会索引页面的正文内容。如果需要索引页面的正文内容，可以将该选项设置为 true。)
+    //   indexContent: true,
+    //   // 为分类和标签添加索引
+    //   customFields: [
+    //     {
+    //       getter: (page): any => page.frontmatter.category,
+    //       formatter: {
+    //         '/': 'Category: $content',
+    //         '/zh/': '分类：$content'
+    //       }
+    //     },
+    //     {
+    //       getter: page => page.frontmatter.tag,
+    //       formatter: {
+    //         '/': 'Tag: $content',
+    //         '/zh/': '标签：$content'
+    //       }
+    //     }
+    //   ],
+    //   hotKeys: [{ key: 'k', ctrl: true }], //https://plugin-search-pro.vuejs.press/zh/config.html#hotkeys  //当热键被按下时，搜索框的输入框会被聚焦，设置为空数组以禁用热键。
+    //   queryHistoryCount: 5, //存储搜索查询词历史的最大数量，可以设置为 0 以禁用。
+    //   resultHistoryCount: 5, // 存储搜索结果历史的最大数量，可以设置为 0 以禁用。
+    //   worker: 'search-pro.worker.js' //输出的 Worker 文件名称
+    // })
   ],
   // Enable it with pwa
   // shouldPrefetch: false,
