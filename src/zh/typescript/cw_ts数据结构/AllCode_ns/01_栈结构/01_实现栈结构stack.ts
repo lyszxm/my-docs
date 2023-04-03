@@ -35,7 +35,16 @@ class ArrayStack<T = any> {
   isEmpty(): boolean {
     return this.data.length == 0
   }
+
+  /**
+   * @description: 读取一下data
+   * @return {*}
+   */
+  get(): T[] {
+    return this.data.slice() //浅拷贝一下
+  }
 }
+export { ArrayStack }
 
 const stack1 = new ArrayStack<string>()
 
@@ -49,5 +58,3 @@ if (res) {
 }
 res?.split('')
 // console.log(process.env)
-
-export { ArrayStack }

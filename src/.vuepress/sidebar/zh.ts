@@ -38,6 +38,12 @@ export const zhSidebar = sidebar({
         },
       ]
     },*/
+    getCatalogueByPath("zh/面试", {
+      cateIcon: "typescript",
+      isLink: true,
+      fileIcon: "blog",
+      collapsible: true,
+    }),
     getCatalogueByPath("zh/typescript", {
       cateIcon: "typescript",
       isLink: true,
