@@ -6,7 +6,7 @@ category:
   - 使用指南
 ---
 
-##  [new的四部](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
+## [new的四部](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new)
 
 `使用new来构建函数，会执行如下四部操作：`
 

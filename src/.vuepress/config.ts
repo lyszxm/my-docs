@@ -3,62 +3,61 @@ import { viteBundler } from "@vuepress/bundler-vite";
 import { path } from "@vuepress/utils";
 import theme from "./theme.js";
 
-import { searchPlugin } from "@vuepress/plugin-search"; //@vuepress/plugin-search 为你的文档网站提供本地搜索能力。
-import { docsearchPlugin } from "@vuepress/plugin-docsearch"; //将 Algolia DocSearch 集成到 VuePress 中，为你的文档网站提供搜索功能。
-import { searchProPlugin } from "vuepress-plugin-search-pro";
-const IS_NETLIFY = "NETLIFY" in process.env;
-console.log(path.resolve(__dirname, "../../src"), "-----");
-console.log(import.meta.url, IS_NETLIFY);
+import { searchPlugin } from '@vuepress/plugin-search' //@vuepress/plugin-search 为你的文档网站提供本地搜索能力。
+import { docsearchPlugin } from '@vuepress/plugin-docsearch' //将 Algolia DocSearch 集成到 VuePress 中，为你的文档网站提供搜索功能。
+import { searchProPlugin } from 'vuepress-plugin-search-pro'
+const IS_NETLIFY = 'NETLIFY' in process.env
+console.log(path.resolve(__dirname, '../../src'), '-----')
+console.log(import.meta.url, IS_NETLIFY)
 // console.log(process.env)
 
 export default defineUserConfig({
   markdown: {
     importCode: {
-      handleImportPath: (str) =>
-        str.replace(/^@src/, path.resolve(__dirname, "../../src")),
-    },
+      handleImportPath: str => str.replace(/^@src/, path.resolve(__dirname, '../../src'))
+    }
   },
   // public: `${sourceDir}/.vuepress/public`, //默认值： `${sourceDir}/.vuepress/public`  //指定 Public 文件目录。
-  pagePatterns: ["**/*.md", "!.vuepress", "!node_modules"], //默认值： ['**/*.md', '!.vuepress', '!node_modules'] //指定页面文件的 Patterns 。这些 Patterns 是相对于 Source 目录的
+  pagePatterns: ['**/*.md', '!.vuepress', '!node_modules'], //默认值： ['**/*.md', '!.vuepress', '!node_modules'] //指定页面文件的 Patterns 。这些 Patterns 是相对于 Source 目录的
   bundler: viteBundler({
     viteOptions: {
       server: {
-        host: "0.0.0.0",
-        port: 7001,
+        host: '0.0.0.0',
+        port: 7001
       },
       resolve: {
         alias: {
-          "@component": path.resolve(__dirname, "../../src/components"),
-          "@src": path.resolve(__dirname, "../../src"),
-        },
+          '@component': path.resolve(__dirname, '../../src/components'),
+          '@src': path.resolve(__dirname, '../../src')
+        }
       },
       build: {
-        minify: "esbuild",
+        minify: 'esbuild',
         terserOptions: {
           compress: {
             //生产环境时移除console.log()
             drop_console: true,
-            drop_debugger: true,
-          },
-        },
-      },
+            drop_debugger: true
+          }
+        }
+      }
     },
-    vuePluginOptions: {},
+    vuePluginOptions: {}
   }),
-  base: "/my-docs/", //部署站点的基础路径。如果你想让你的网站部署到一个子路径下，你将需要设置它。它的值应当总是以斜杠开始，并以斜杠结束。举例来说，如果你想将你的网站部署到 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/"。需要注意的是， base 应该是一个以 / 开始和结束的绝对路径名。
+  base: '/my-docs/', //部署站点的基础路径。如果你想让你的网站部署到一个子路径下，你将需要设置它。它的值应当总是以斜杠开始，并以斜杠结束。举例来说，如果你想将你的网站部署到 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/"。需要注意的是， base 应该是一个以 / 开始和结束的绝对路径名。
 
   // https://v2.vuepress.vuejs.org/zh/reference/config.html#lang
   locales: {
-    "/": {
-      lang: "en-US",
-      title: "lys document",
-      description: "lys document", // 站点的描述。它将会在最终渲染出的 HTML 中作为 <meta name="description" /> 标签的 content 属性。它会被每个页面的 Frontmatter 中的 description 字段覆盖。
+    '/': {
+      lang: 'en-US',
+      title: 'lys document',
+      description: 'lys document' // 站点的描述。它将会在最终渲染出的 HTML 中作为 <meta name="description" /> 标签的 content 属性。它会被每个页面的 Frontmatter 中的 description 字段覆盖。
     },
-    "/zh/": {
-      lang: "zh-CN",
-      title: "lys的文档",
-      description: "lys的文档",
-    },
+    '/zh/': {
+      lang: 'zh-CN',
+      title: 'lys的文档',
+      description: 'lys的文档'
+    }
   },
 
   theme,
@@ -193,7 +192,7 @@ export default defineUserConfig({
     //   resultHistoryCount: 5, // 存储搜索结果历史的最大数量，可以设置为 0 以禁用。
     //   worker: 'search-pro.worker.js' //输出的 Worker 文件名称
     // })
-  ],
+  ]
   // Enable it with pwa
   // shouldPrefetch: false,
-});
+})

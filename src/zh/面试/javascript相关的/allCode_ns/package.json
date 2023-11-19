@@ -1,0 +1,12 @@
+{
+  "name": "allCode_ns",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsnd --respawn --transpile-only src/index.ts",
+    "watch": "tsc --watch",
+    "check": "tsc --noEmit"
+  }
+}
