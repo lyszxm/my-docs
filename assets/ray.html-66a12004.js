@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-1b428a4d.js";import{o as r,c as t,a}from"./app-fc4d2be2.js";const l={},o=[a("p",null,"Feature details here.",-1)];const s=e(l,[["render",function(e,a){return r(),t("div",null,o)}],["__file","ray.html.vue"]]);export{s as default};
