@@ -155,44 +155,44 @@ export default defineUserConfig({
         //   }
         // }),
         // searchPlugin({
-        //   // 你的选项
-        //   locales: {
-        //     '/': {
-        //       placeholder: 'search'
+        //     // 你的选项
+        //     locales: {
+        //         '/': {
+        //             placeholder: 'search'
+        //         },
+        //         '/zh/': {
+        //             placeholder: '搜索'
+        //         }
         //     },
-        //     '/zh/': {
-        //       placeholder: '搜索'
-        //     }
-        //   }, // 排除首页
-        //   isSearchable: page => {
-        //     // console.log(page)
-        //     return page.path !== '/'
-        //   }
+        //     // 排除首页
+        //     isSearchable: page => page.path !== '/',
+        //     // 允许搜索 Frontmatter 中的 `tags`
+        //     getExtraFields: page => page.frontmatter.tags ?? []
         // }),
         // searchProPlugin({
-        //   // 索引全部内容(默认情况下，插件只会索引页面的标题和摘要以及你的自定义索引项，不会索引页面的正文内容。如果需要索引页面的正文内容，可以将该选项设置为 true。)
-        //   indexContent: true,
-        //   // 为分类和标签添加索引
-        //   customFields: [
-        //     {
-        //       getter: (page): any => page.frontmatter.category,
-        //       formatter: {
-        //         '/': 'Category: $content',
-        //         '/zh/': '分类：$content'
-        //       }
-        //     },
-        //     {
-        //       getter: page => page.frontmatter.tag,
-        //       formatter: {
-        //         '/': 'Tag: $content',
-        //         '/zh/': '标签：$content'
-        //       }
-        //     }
-        //   ],
-        //   hotKeys: [{ key: 'k', ctrl: true }], //https://plugin-search-pro.vuejs.press/zh/config.html#hotkeys  //当热键被按下时，搜索框的输入框会被聚焦，设置为空数组以禁用热键。
-        //   queryHistoryCount: 5, //存储搜索查询词历史的最大数量，可以设置为 0 以禁用。
-        //   resultHistoryCount: 5, // 存储搜索结果历史的最大数量，可以设置为 0 以禁用。
-        //   worker: 'search-pro.worker.js' //输出的 Worker 文件名称
+        //     // 索引全部内容(默认情况下，插件只会索引页面的标题和摘要以及你的自定义索引项，不会索引页面的正文内容。如果需要索引页面的正文内容，可以将该选项设置为 true。)
+        //     indexContent: true,
+        //     // 为分类和标签添加索引
+        //     customFields: [
+        //         {
+        //             getter: (page): any => page?.frontmatter?.category,
+        //             formatter: {
+        //                 '/': 'Category: $content',
+        //                 '/zh/': '分类：$content'
+        //             }
+        //         },
+        //         {
+        //             getter: page => page.frontmatter.tag,
+        //             formatter: {
+        //                 '/': 'Tag: $content',
+        //                 '/zh/': '标签：$content'
+        //             }
+        //         }
+        //     ],
+        //     hotKeys: [{ key: 'k', ctrl: true }], //https://plugin-search-pro.vuejs.press/zh/config.html#hotkeys  //当热键被按下时，搜索框的输入框会被聚焦，设置为空数组以禁用热键。
+        //     queryHistoryCount: 5, //存储搜索查询词历史的最大数量，可以设置为 0 以禁用。
+        //     resultHistoryCount: 5, // 存储搜索结果历史的最大数量，可以设置为 0 以禁用。
+        //     worker: 'search-pro.worker.js' //输出的 Worker 文件名称
         // })
     ]
     // Enable it with pwa

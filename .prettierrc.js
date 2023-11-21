@@ -1,4 +1,4 @@
-{
+module.export = {
   "useTabs": false,
   "printWidth": 90,
   "tabWidth": 4,
