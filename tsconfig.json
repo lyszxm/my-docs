@@ -17,6 +17,7 @@
     "baseUrl": ".",
     "allowJs": false,
     "resolveJsonModule": true,
+    "declarationMap": false,
     "lib": [
       "dom",
       "esnext"

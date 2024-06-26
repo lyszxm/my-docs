@@ -2,6 +2,13 @@
 
 ## [地址](https://lyszxm.github.io/my-docs/zh/)
 
+之后多多参考这个博客 https://github.com/FuckDoctors/notes2 （已在D盘下）
+https://www.zhaobc.site/
+
+https://theme-hope.vuejs.press/zh/guide/blog/intro.html
+
+
+
 [主题文档](https://theme-hope.vuejs.press/zh/guide/get-started/intro.html)
 
 "tips":
