@@ -1,4 +1,4 @@
-// you can change colors here 设置默认主题色
+// 你应该在 .vuepress/styles/palette.scss 中通过 $theme-color 设置站点的默认主题颜色：(设置默认主题色)
 $theme-color: rgba(#2196f3, 0.8);
 /*
 颜色设置对于所有颜色，如果其在浅色模式和深色模式颜色相同，可直接设置；否则，请设置一个 Map 类型的 Sass 变量分别给出浅色和深色模式下的颜色。此变量键名为 light 和 dark，值为颜色值。

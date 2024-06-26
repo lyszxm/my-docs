@@ -17,6 +17,10 @@ dist/
 
 # Typescript build info
 *.tsbuildinfo
+src/.vuepress/**/**.js.map
+src/.vuepress/**/**.js
+src/utils/**/**.js
+src/utils/**/**.js.map
 
 # Coverage Files
 coverage/
@@ -25,3 +29,6 @@ coverage/
 .DS_Store
 
 *.map
+
+# 直接书写单词将同时匹配所有文件或目录，无论位置
+node_modules

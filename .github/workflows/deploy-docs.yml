@@ -20,7 +20,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           # 选择要使用的 node 版本
-          node-version: '16'
+          node-version: "16"
+
+      - name: Set yarn --ignore-engines
+        run: yarn config set ignore-engines true
 
       # 缓存 node_modules
       - name: Cache dependencies
@@ -35,7 +38,7 @@ jobs:
       # 如果缓存没有命中，安装依赖
       - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn --frozen-lockfile
+        run: yarn --frozen-lockfile --check-files --ignore-engines
 
       # 运行构建脚本
       - name: Build VuePress site
