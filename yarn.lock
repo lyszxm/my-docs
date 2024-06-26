@@ -1462,27 +1462,10 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
-"@mdit/plugin-align@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-align/-/plugin-align-0.4.1.tgz#91c6ffd4c4de9762ecea498916d20add4ff98076"
-  integrity sha512-46DaKYsov6o7laFqcUTWpjT0TmW8f7EgZ0GeAoZ785vtYMpIWR2ewhevYDRs7r00NMT768/wHypWinCyXlwvuw==
-  dependencies:
-    "@mdit/plugin-container" "0.4.1"
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
 "@mdit/plugin-attrs@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npmmirror.com/@mdit/plugin-attrs/-/plugin-attrs-0.3.0.tgz"
   integrity sha512-u8TrEmoZsCmtPA8Q94CXEBAU8VO8xEaX7JJ20SXcv5C8u4h5S/LwnqBXckBH9B8Qz0j8JS7XeKxfm6X+lmwMxg==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
-"@mdit/plugin-attrs@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-attrs/-/plugin-attrs-0.4.1.tgz#fc3a944cc87ad209b5d05655896480d3c792f107"
-  integrity sha512-C4eNiord5P5njo0mkkB/XS/dhwf3A7nJd2NF3Bz264rWeY1pyJebryLllzFBeTtKjL9kRNZSUt4XnEkhKRpTEg==
   dependencies:
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
@@ -1495,26 +1478,10 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
-"@mdit/plugin-container@0.4.1", "@mdit/plugin-container@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-container/-/plugin-container-0.4.1.tgz#ce2b31a13455f3a409bf789c5e83c8fa4a70d5cf"
-  integrity sha512-CTawSHXWJpFd1IJqMKdifNK1srqwcbOThtexKs2cdcTmM/+YC74e5cZ1nCxQ4Y3h+2Lxw0EvL+4H3SAPbUXpow==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
 "@mdit/plugin-figure@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npmmirror.com/@mdit/plugin-figure/-/plugin-figure-0.3.0.tgz"
   integrity sha512-657sxb+qjZ5ff5YXEOuPqobSFcXuLNS7pWFA9oZxK8Fbo8FqS/sAKuUV2axo2SBR9pydLNP/bPvu2YbvYdQkNA==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
-"@mdit/plugin-figure@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-figure/-/plugin-figure-0.4.1.tgz#6f4fd38dfa7f565fe918d03f827225766b0a3f71"
-  integrity sha512-Nh287T6PGmrB2u85edtCd2kQc8y4rMxBOymXrCvR7uqU9XTwGPPdkPANUcAfEZ5X5xd5PSYyFoOJVivoKVCkZQ==
   dependencies:
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
@@ -1527,26 +1494,10 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
-"@mdit/plugin-footnote@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-footnote/-/plugin-footnote-0.4.1.tgz#050648b495e55d56f271836b40f545f72ef74c56"
-  integrity sha512-51DPmYu/mmmSeXwIcHncJB+CtRqhGrEppRwmV7FQ1NoJeJFQ/4167i9euvGhI7ITyjQdYzINDO9qlk/hfmhNqg==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
 "@mdit/plugin-img-lazyload@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npmmirror.com/@mdit/plugin-img-lazyload/-/plugin-img-lazyload-0.3.0.tgz"
   integrity sha512-KytI59hWWfiynlt8meFBEGcJO0LrdUbj2Uicq7E1NycTIipgxAKIPU0pxc/eY+gdJhp+W0lpl+orRG0eoVLX+A==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
-"@mdit/plugin-img-lazyload@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-img-lazyload/-/plugin-img-lazyload-0.4.1.tgz#3aba90e3d19f6b41042607f56fd607c40bbfa292"
-  integrity sha512-cnJLGOyi7QQ6VgG+Lb0O0s+1+ByOuhSdlyzDOQYAua8S7WWzn3s+dPWvailk/2oti8ag1Zi19EE/RwXBHLlVsw==
   dependencies:
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
@@ -1559,14 +1510,6 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
-"@mdit/plugin-img-mark@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-img-mark/-/plugin-img-mark-0.4.1.tgz#5d6f5c15c895dc09dff3c4a29bd61d20da44a9cb"
-  integrity sha512-X7uJsBpDfU/omEy33F4e4Foopr/Q/8ZQjqjgYuOpB1rx8GA0WNL1/U7GWlnnsA3y3VwGGf1EJfuvFm821Qdq+A==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
 "@mdit/plugin-img-size@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npmmirror.com/@mdit/plugin-img-size/-/plugin-img-size-0.3.0.tgz"
@@ -1575,27 +1518,10 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
-"@mdit/plugin-img-size@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-img-size/-/plugin-img-size-0.4.1.tgz#555f47d93e06fe6e1129e44b2397a1c8779e43b6"
-  integrity sha512-/mBCpoK9Uvy0iXT45NP1G/OkvlxdbWXVmGwKiuAJHcOzZ9sRsSnnrdBQBQGuhj3Pl0NIdZL9HeZH4YYGIhaMpg==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
 "@mdit/plugin-include@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npmmirror.com/@mdit/plugin-include/-/plugin-include-0.3.0.tgz"
   integrity sha512-rDH+4fqT3bv7+Nf5OT6LOvwn545ox5eE1eGHkZWty/XINbKmNP6VSdbgdieqAgJA4nlLCs4yscFk2vuzT8dqrQ==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-    upath "^2.0.1"
-
-"@mdit/plugin-include@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-include/-/plugin-include-0.4.1.tgz#52bf371b1e6bbbe49467f433d626ff51d40d9ef7"
-  integrity sha512-XMVyFKNNUwNZbPC9koxHSE+gKqlR/JycvKEuRLGbPaXz+i7lricc59wDmlHJ7oOCCVLGnxsj9MslERcjQQXCrA==
   dependencies:
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
@@ -1612,29 +1538,10 @@
     katex "^0.16.4"
     markdown-it "^13.0.1"
 
-"@mdit/plugin-katex@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-katex/-/plugin-katex-0.4.1.tgz#c9fde0a5346c5cf63bd712dca4ee055554fa9e99"
-  integrity sha512-0Nk3GdOV5h8LyqvuWWabKNBjWRip0PLMmFktaOQeUghK2hWMaQJJuPc9IqjBfbei0IWyU34KMFSx9GuwMznhXw==
-  dependencies:
-    "@mdit/plugin-tex" "0.4.1"
-    "@types/katex" "^0.16.0"
-    "@types/markdown-it" "^12.2.3"
-    katex "^0.16.4"
-    markdown-it "^13.0.1"
-
 "@mdit/plugin-mark@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npmmirror.com/@mdit/plugin-mark/-/plugin-mark-0.3.0.tgz"
   integrity sha512-LRCjS/q8ryg/yWnKCGIKWVxCRu36WBfUGDlCuw+cb59ptkbF24Q6Khs8pnZZGq6q+XSFHmYUCCHqp2q79XAvyA==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
-"@mdit/plugin-mark@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-mark/-/plugin-mark-0.4.1.tgz#2e15e1896c2ab61899aa00e611b43570134f346d"
-  integrity sha512-rfMten6lQpGw/xlxaxtSIqBikfqxw/nIPr8Dt51SdWlaejjXohXoaldGDH8D2XuLxXw+Lquvf0O/q8/RfdEQTA==
   dependencies:
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
@@ -1650,29 +1557,10 @@
     mathjax-full "^3.2.2"
     upath "^2.0.1"
 
-"@mdit/plugin-mathjax@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-mathjax/-/plugin-mathjax-0.4.1.tgz#4413d47a4e7c60dc0a40a91f3e0739be9c96676a"
-  integrity sha512-eZrvcwx7OMHjm9V388AINWU+O4TgOMd3sgXtVtODgYtK3XzU+F9Aq8ExX5pxccSNrzjsENCYtv5kEG2j0+7yxA==
-  dependencies:
-    "@mdit/plugin-tex" "0.4.1"
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-    mathjax-full "^3.2.2"
-    upath "^2.0.1"
-
 "@mdit/plugin-stylize@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npmmirror.com/@mdit/plugin-stylize/-/plugin-stylize-0.3.0.tgz"
   integrity sha512-WT+ts6/Xd+K3ASlHDWa4ZHqDx4KgRsuHgLhmyvyAGY9ApNP1Q0ROY5Ik4bn92WVRU3WEfK8ICOEOnoEPEP2NJA==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
-"@mdit/plugin-stylize@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-stylize/-/plugin-stylize-0.4.1.tgz#306ee55c226ca753b6f84d6cacbb95a99264afc5"
-  integrity sha512-C72BuR0gSwTYBpUYnXbafrDXyOYV13lHlZdxFg7J7/d+cTasBYgCnNPSiTPDkLi7vas586kxhrE9uhQEQh51kA==
   dependencies:
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
@@ -1685,26 +1573,10 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
-"@mdit/plugin-sub@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-sub/-/plugin-sub-0.4.1.tgz#f7936e925bd854c5ed0ce600d8ad9fe50be2e011"
-  integrity sha512-pIiWhKNONw1FJ8+fDR+BGE2xLUkhp2v8FKvDmAAX+IZBiGktmQc0b+eA4YQPlLyt2MWSZpJE8yyDylyRoc3Gew==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
 "@mdit/plugin-sup@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npmmirror.com/@mdit/plugin-sup/-/plugin-sup-0.3.0.tgz"
   integrity sha512-K6L1/WK94XwFG+Oo54GVM9m+Y0cjinoiVtWjT0OIswCQWDuuXG7H4JH2uxBxQJb8MWNsnnQRUFnaG1RPiRP94Q==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
-"@mdit/plugin-sup@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-sup/-/plugin-sup-0.4.1.tgz#f6cc42afa0185e3003b6eb4134ea606e35a17f98"
-  integrity sha512-PQhAp4E9XVTxqYDJKuxPF2AiwBbuwS9R82bWjXVCFYJTcpCqSIBRjN3IOCsVe3g2GXQ/KsvkJFFMDtrprJoS/Q==
   dependencies:
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
@@ -1717,26 +1589,10 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
-"@mdit/plugin-tab@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-tab/-/plugin-tab-0.4.1.tgz#d15a1c9abb01381634ad106a4e60dc0dd47697de"
-  integrity sha512-TNGjRI96LS4+WBy38kVOR2KR4VV/e07jzCG2Ql+P1yIBhW0L74UgwrW3D+NiUk9gLIZ8u94NFlhH3djmaNKXIA==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
 "@mdit/plugin-tasklist@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npmmirror.com/@mdit/plugin-tasklist/-/plugin-tasklist-0.3.0.tgz"
   integrity sha512-/nekYc2zSKxGFbTR2o6dXyqoUfQBrf9PX0O81ZOGIzaMI+t6y9q3tJwnmbwLD/QE1MeW6kaR4byCcD3rc1SyAQ==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
-"@mdit/plugin-tasklist@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-tasklist/-/plugin-tasklist-0.4.1.tgz#4bf2e1c11c18756115251ea931ec7a8a62b0cd25"
-  integrity sha512-ImK7PNeJvFlsZD8DcbQc+b9+b95eNahPuBQDM/hmQs637Od+PpLl1zxi+8e3wNaMjH1+rhVEeVFsts/p5LPXZA==
   dependencies:
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
@@ -1749,26 +1605,10 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
-"@mdit/plugin-tex@0.4.1", "@mdit/plugin-tex@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-tex/-/plugin-tex-0.4.1.tgz#f6f833ff471b05ee18b8fe7b5550e5836a4cf78d"
-  integrity sha512-djpDGCIQoMVzydaQ34C+hCQUdJesG0QBQcQeWz+YqrGckvBgCG6NcpuNschCh4D4f0bNQEKVqt4dZ2mWsHqFtg==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
 "@mdit/plugin-uml@^0.3.0":
   version "0.3.0"
   resolved "https://registry.npmmirror.com/@mdit/plugin-uml/-/plugin-uml-0.3.0.tgz"
   integrity sha512-QS00olhRy3Ct5qwjFYBk6YtCZK5oLM8K4SyPND7LCrqiV3PiAtH8jXN9BnDmKQN+EhXXzFe3NlxRjNLvGu/JUw==
-  dependencies:
-    "@types/markdown-it" "^12.2.3"
-    markdown-it "^13.0.1"
-
-"@mdit/plugin-uml@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.npmmirror.com/@mdit/plugin-uml/-/plugin-uml-0.4.1.tgz#5739bcd95e4a8148c07de0be6bbdd775bf94cba7"
-  integrity sha512-THy+SgT9bVDmkN3OqU3v7reK2e1gyH/N9J0eHo4GYrxZo6b7DACvEQQ4kgwpOph8U41TxjWyV6VzDYPMPKGo4Q==
   dependencies:
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
@@ -3574,7 +3414,7 @@ dot-prop@^5.1.0:
   dependencies:
     is-obj "^2.0.0"
 
-echarts@^5.4.1, echarts@^5.4.2:
+echarts@^5.4.1:
   version "5.4.2"
   resolved "https://registry.npmmirror.com/echarts/-/echarts-5.4.2.tgz#9f38781c9c6ae323e896956178f6956952c77a48"
   integrity sha512-2W3vw3oI2tWJdyAz+b8DuWS0nfXtSDqlDmqgin/lfzbkB01cuMEN66KWBlmur3YMp5nEDEEt5s23pllnAzB4EA==
@@ -5499,17 +5339,6 @@ plyr@^3.7.7:
     rangetouch "^2.0.1"
     url-polyfill "^1.1.12"
 
-plyr@^3.7.8:
-  version "3.7.8"
-  resolved "https://registry.npmmirror.com/plyr/-/plyr-3.7.8.tgz#b79bccc23687705b5d9a283b2a88c124bf7471ed"
-  integrity sha512-yG/EHDobwbB/uP+4Bm6eUpJ93f8xxHjjk2dYcD1Oqpe1EcuQl5tzzw9Oq+uVAzd2lkM11qZfydSiyIpiB8pgdA==
-  dependencies:
-    core-js "^3.26.1"
-    custom-event-polyfill "^1.0.7"
-    loadjs "^4.2.0"
-    rangetouch "^2.0.1"
-    url-polyfill "^1.1.12"
-
 pngjs@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmmirror.com/pngjs/-/pngjs-5.0.0.tgz"
@@ -5876,15 +5705,6 @@ sass@^1.58.3, sass@^1.59.3:
   version "1.59.3"
   resolved "https://registry.npmmirror.com/sass/-/sass-1.59.3.tgz"
   integrity sha512-QCq98N3hX1jfTCoUAsF3eyGuXLsY7BCnCEg9qAact94Yc21npG2/mVOqoDvE0fCbWDqiM4WlcJQla0gWG2YlxQ==
-  dependencies:
-    chokidar ">=3.0.0 <4.0.0"
-    immutable "^4.0.0"
-    source-map-js ">=0.6.2 <2.0.0"
-
-sass@^1.60.0:
-  version "1.60.0"
-  resolved "https://registry.npmmirror.com/sass/-/sass-1.60.0.tgz#657f0c23a302ac494b09a5ba8497b739fb5b5a81"
-  integrity sha512-updbwW6fNb5gGm8qMXzVO7V4sWf7LMXnMly/JEyfbfERbVH46Fn6q02BX7/eHTdKpE7d+oTkMMQpFWNUMfFbgQ==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
@@ -6632,29 +6452,6 @@ vuepress-plugin-components@2.0.0-beta.197:
     vuepress-plugin-sass-palette "2.0.0-beta.197"
     vuepress-shared "2.0.0-beta.197"
 
-vuepress-plugin-components@^2.0.0-beta.61:
-  version "2.0.0-beta.199"
-  resolved "https://registry.npmmirror.com/vuepress-plugin-components/-/vuepress-plugin-components-2.0.0-beta.199.tgz#0a5e37f13dcb60eb20b9e0f503b84b98837223e7"
-  integrity sha512-vyNzMKmV3iJeNjLemDOaRIUONvksQ5cf4yxgSYW2LXaub1xRUAQQcpqmoAUcVDx9LmJo53MhoLy/U3NnwINnJg==
-  dependencies:
-    "@stackblitz/sdk" "^1.8.2"
-    "@vuepress/client" "2.0.0-beta.61"
-    "@vuepress/shared" "2.0.0-beta.61"
-    "@vuepress/utils" "2.0.0-beta.61"
-    "@vueuse/core" "^9.13.0"
-    artplayer "^4.6.2"
-    balloon-css "^1.2.0"
-    dashjs "^4.6.0"
-    hls.js "^1.3.5"
-    mpegts.js "^1.7.2"
-    plyr "^3.7.8"
-    qrcode "^1.5.1"
-    vue "^3.2.47"
-    vue-router "^4.1.6"
-    vuepress-plugin-reading-time2 "2.0.0-beta.199"
-    vuepress-plugin-sass-palette "2.0.0-beta.199"
-    vuepress-shared "2.0.0-beta.199"
-
 vuepress-plugin-copy-code2@2.0.0-beta.197:
   version "2.0.0-beta.197"
   resolved "https://registry.npmmirror.com/vuepress-plugin-copy-code2/-/vuepress-plugin-copy-code2-2.0.0-beta.197.tgz"
@@ -6738,50 +6535,6 @@ vuepress-plugin-md-enhance@2.0.0-beta.197:
     vuepress-plugin-sass-palette "2.0.0-beta.197"
     vuepress-shared "2.0.0-beta.197"
 
-vuepress-plugin-md-enhance@^2.0.0-beta.200:
-  version "2.0.0-beta.200"
-  resolved "https://registry.npmmirror.com/vuepress-plugin-md-enhance/-/vuepress-plugin-md-enhance-2.0.0-beta.200.tgz#a5a9a34d6fe12351b0d1d723e909e9dd2b9dc676"
-  integrity sha512-KbBopiIe4N1LUdb6KI0Ndh9VXiHCtrqQ+HC03IWHHNBAoXun/CFpAKTtaOOuxBnPF8hIG4v6eLzs/xfAjuYRBg==
-  dependencies:
-    "@babel/core" "^7.21.3"
-    "@mdit/plugin-align" "^0.4.1"
-    "@mdit/plugin-attrs" "^0.4.1"
-    "@mdit/plugin-container" "^0.4.1"
-    "@mdit/plugin-figure" "^0.4.1"
-    "@mdit/plugin-footnote" "^0.4.1"
-    "@mdit/plugin-img-lazyload" "^0.4.1"
-    "@mdit/plugin-img-mark" "^0.4.1"
-    "@mdit/plugin-img-size" "^0.4.1"
-    "@mdit/plugin-include" "^0.4.1"
-    "@mdit/plugin-katex" "^0.4.1"
-    "@mdit/plugin-mark" "^0.4.1"
-    "@mdit/plugin-mathjax" "^0.4.1"
-    "@mdit/plugin-stylize" "^0.4.1"
-    "@mdit/plugin-sub" "^0.4.1"
-    "@mdit/plugin-sup" "^0.4.1"
-    "@mdit/plugin-tab" "^0.4.1"
-    "@mdit/plugin-tasklist" "^0.4.1"
-    "@mdit/plugin-tex" "^0.4.1"
-    "@mdit/plugin-uml" "^0.4.1"
-    "@types/markdown-it" "^12.2.3"
-    "@vue/repl" "^1.3.3"
-    "@vuepress/client" "2.0.0-beta.61"
-    "@vuepress/shared" "2.0.0-beta.61"
-    "@vuepress/utils" "2.0.0-beta.61"
-    "@vueuse/core" "^9.13.0"
-    balloon-css "^1.2.0"
-    chart.js "^4.2.1"
-    echarts "^5.4.2"
-    flowchart.ts "^0.1.2"
-    katex "^0.16.4"
-    markdown-it "^13.0.1"
-    mermaid "10.0.2"
-    reveal.js "^4.4.0"
-    vue "^3.2.47"
-    vue-router "^4.1.6"
-    vuepress-plugin-sass-palette "2.0.0-beta.200"
-    vuepress-shared "2.0.0-beta.200"
-
 vuepress-plugin-photo-swipe@2.0.0-beta.197, vuepress-plugin-photo-swipe@^2.0.0-beta.197:
   version "2.0.0-beta.197"
   resolved "https://registry.npmmirror.com/vuepress-plugin-photo-swipe/-/vuepress-plugin-photo-swipe-2.0.0-beta.197.tgz#24bb41024dbf927ea71171b8e34c03e2e8e8ddbb"
@@ -6821,13 +6574,6 @@ vuepress-plugin-reading-time2@2.0.0-beta.197:
   dependencies:
     vuepress-shared "2.0.0-beta.197"
 
-vuepress-plugin-reading-time2@2.0.0-beta.199:
-  version "2.0.0-beta.199"
-  resolved "https://registry.npmmirror.com/vuepress-plugin-reading-time2/-/vuepress-plugin-reading-time2-2.0.0-beta.199.tgz#e7cb6b3a20483fdca8866e7a796eff1418653251"
-  integrity sha512-ldaEnYS0dh284ZImZ+GyGUin2bS498cnOQrSdomXUAA2lUa1z1AVnK4B9mCCLhzFUI5jcMd3khwwO5zIrNwsvg==
-  dependencies:
-    vuepress-shared "2.0.0-beta.199"
-
 vuepress-plugin-rtl@2.0.0-beta.197:
   version "2.0.0-beta.197"
   resolved "https://registry.npmmirror.com/vuepress-plugin-rtl/-/vuepress-plugin-rtl-2.0.0-beta.197.tgz"
@@ -6849,28 +6595,6 @@ vuepress-plugin-sass-palette@2.0.0-beta.197:
     chokidar "^3.5.3"
     sass "^1.59.3"
     vuepress-shared "2.0.0-beta.197"
-
-vuepress-plugin-sass-palette@2.0.0-beta.199:
-  version "2.0.0-beta.199"
-  resolved "https://registry.npmmirror.com/vuepress-plugin-sass-palette/-/vuepress-plugin-sass-palette-2.0.0-beta.199.tgz#3591366b1c66521ab9f526d036e7eacdbc2d1432"
-  integrity sha512-q8jAUvm5yvyUvqHzDI1BuuR6RxKfQ6I2pRtEtnwXupQ3MmVae/92MOs/olSymV3Jm9DCk7b0y7I7kGVF91Ubvw==
-  dependencies:
-    "@vuepress/shared" "2.0.0-beta.61"
-    "@vuepress/utils" "2.0.0-beta.61"
-    chokidar "^3.5.3"
-    sass "^1.60.0"
-    vuepress-shared "2.0.0-beta.199"
-
-vuepress-plugin-sass-palette@2.0.0-beta.200:
-  version "2.0.0-beta.200"
-  resolved "https://registry.npmmirror.com/vuepress-plugin-sass-palette/-/vuepress-plugin-sass-palette-2.0.0-beta.200.tgz#29a5c1d14de8eb447242d72aa339fd641f077771"
-  integrity sha512-yhcm3hvmkj4PlK0bAg1Yebx3RwpOygrOIe1EazqA6phuqUIDcLyHI9x9AUmvEvZ7YHC1B0hiExYdb96UFkYl3w==
-  dependencies:
-    "@vuepress/shared" "2.0.0-beta.61"
-    "@vuepress/utils" "2.0.0-beta.61"
-    chokidar "^3.5.3"
-    sass "^1.60.0"
-    vuepress-shared "2.0.0-beta.200"
 
 vuepress-plugin-search-pro@^2.0.0-beta.197:
   version "2.0.0-beta.197"
@@ -6911,44 +6635,6 @@ vuepress-shared@2.0.0-beta.197:
   version "2.0.0-beta.197"
   resolved "https://registry.npmmirror.com/vuepress-shared/-/vuepress-shared-2.0.0-beta.197.tgz"
   integrity sha512-eTs6AT9w0djzsxNPPXiWK6lHcsS5AVnwRdu90/YthGkpPY2pGarN9KrtGX7+qVr+G4HS8v4Qu43+X+iDInNBgg==
-  dependencies:
-    "@vuepress/client" "2.0.0-beta.61"
-    "@vuepress/shared" "2.0.0-beta.61"
-    "@vuepress/utils" "2.0.0-beta.61"
-    "@vueuse/core" "^9.13.0"
-    cheerio "1.0.0-rc.12"
-    dayjs "^1.11.7"
-    execa "^7.1.1"
-    fflate "^0.7.4"
-    gray-matter "^4.0.3"
-    semver "^7.3.8"
-    striptags "^3.2.0"
-    vue "^3.2.47"
-    vue-router "^4.1.6"
-
-vuepress-shared@2.0.0-beta.199:
-  version "2.0.0-beta.199"
-  resolved "https://registry.npmmirror.com/vuepress-shared/-/vuepress-shared-2.0.0-beta.199.tgz#e722f5bf756a40fdc33a756e1b5a5556fdd1b1c6"
-  integrity sha512-hmdpARmQOObqmjVirelNpuLpW+Cgzlu0iocQsYxCFAXRgoqloxD9LoEDveHXxSpP65Gux81WB2d/QqyzQOXnrA==
-  dependencies:
-    "@vuepress/client" "2.0.0-beta.61"
-    "@vuepress/shared" "2.0.0-beta.61"
-    "@vuepress/utils" "2.0.0-beta.61"
-    "@vueuse/core" "^9.13.0"
-    cheerio "1.0.0-rc.12"
-    dayjs "^1.11.7"
-    execa "^7.1.1"
-    fflate "^0.7.4"
-    gray-matter "^4.0.3"
-    semver "^7.3.8"
-    striptags "^3.2.0"
-    vue "^3.2.47"
-    vue-router "^4.1.6"
-
-vuepress-shared@2.0.0-beta.200:
-  version "2.0.0-beta.200"
-  resolved "https://registry.npmmirror.com/vuepress-shared/-/vuepress-shared-2.0.0-beta.200.tgz#5f5837db74a9cebf74b7686bbd1dfa71f418b30d"
-  integrity sha512-H4TqjpfMR3MkTlStlSvaun1ZpNdhxgX57zVnatSRk9kSr1+VFcRAqLTvDuaSYlMC7i2DDAPKNReQw18h/OBfDw==
   dependencies:
     "@vuepress/client" "2.0.0-beta.61"
     "@vuepress/shared" "2.0.0-beta.61"
