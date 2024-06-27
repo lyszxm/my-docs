@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "用来面试以及其它项目使用的",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "release": "release-it",
     "build": "vuepress build src",
@@ -11,26 +12,28 @@
     "docs:update-package": "npx vp-update",
     "prepare": "husky install",
     "deploy-gh": "yarn docs:build && bash scripts/deploy-gh.sh",
+    "tsc": "tsc -p ./tsconfig.json",
     "ts": "nodemon --watch src/ -e ts --exec ts-node ./src/zh/typescript/cw_ts数据结构/AllCode_ns/index.ts",
     "clean_node_modules": "rimraf node_modules"
   },
   "devDependencies": {
     "@commitlint/cli": "12.1.4",
     "@commitlint/config-conventional": "12.1.4",
-    "@vuepress/client": "2.0.0-beta.62",
-    "@vuepress/plugin-docsearch": "^2.0.0-beta.62",
-    "@vuepress/plugin-search": "^2.0.0-beta.62",
+    "@vuepress/bundler-vite": "^2.0.0-rc.14",
+    "@vuepress/client": "^2.0.0-rc.14",
+    "@vuepress/plugin-docsearch": "^2.0.0-rc.37",
+    "@vuepress/plugin-photo-swipe": "^2.0.0-rc.37",
+    "@vuepress/plugin-search": "^2.0.0-rc.37",
     "cz-customizable": "6.3.0",
     "fast-glob": "^3.2.11",
     "husky": "^7.0.1",
     "lint-staged": "^9.5.0",
     "pathe": "^1.0.0",
-    "prettier": "^2.8.6",
-    "vue": "^3.2.47",
-    "vuepress": "2.0.0-beta.62",
-    "vuepress-plugin-photo-swipe": "^2.0.0-beta.217",
-    "vuepress-plugin-search-pro": "^2.0.0-beta.217",
-    "vuepress-theme-hope": "2.0.0-beta.217"
+    "prettier": "^3.3.2",
+    "vue": "^3.4.29",
+    "vuepress": "^2.0.0-rc.14",
+    "vuepress-plugin-search-pro": "^2.0.0-rc.37",
+    "vuepress-theme-hope": "^2.0.0-rc.37"
   },
   "config": {
     "commitizen": {

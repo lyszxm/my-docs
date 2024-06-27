@@ -9,7 +9,7 @@
     "experimentalDecorators": true,
     "strictFunctionTypes": false,
     "skipLibCheck": true,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
@@ -18,22 +18,11 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "declarationMap": false,
-    "lib": [
-      "dom",
-      "esnext"
-    ],
+    "noEmit": false,
+    "lib": ["dom", "esnext"],
     "incremental": true,
-    "types": [
-      "node",
-      "vuepress",
-    ],
+    "types": ["node", "vuepress"]
   },
-  "include": [
-    "./src/.vuepress/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "src/.vuepress/dist"
-  ]
+  "include": ["./src/.vuepress/**/*.ts", "./src/utils/**/*.ts"],
+  "exclude": ["node_modules", "dist", "src/.vuepress/dist", "src/zh"]
 }
