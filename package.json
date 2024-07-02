@@ -3,41 +3,67 @@
   "version": "0.0.2",
   "description": "用来面试以及其它项目使用的",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "release": "release-it",
-    "build": "vuepress build src",
-    "docs:clean-dev": "vuepress dev src --clean-cache",
-    "dev": "vuepress dev src",
+    "build": "pnpm build:ts && vuepress-vite build src",
+    "docs:clean-dev": "vuepress-vite dev src --clean-cache",
+    "dev": "vuepress-vite dev src",
     "docs:update-package": "npx vp-update",
     "prepare": "husky install",
     "deploy-gh": "yarn docs:build && bash scripts/deploy-gh.sh",
-    "tsc": "tsc -p ./tsconfig.json",
+    "dev:ts": "tsc -b tsconfig.json --watch",
+    "build:ts": "tsc -b tsconfig.json",
     "ts": "nodemon --watch src/ -e ts --exec ts-node ./src/zh/typescript/cw_ts数据结构/AllCode_ns/index.ts",
     "clean_node_modules": "rimraf node_modules"
   },
+  "dependencies": {
+    "bundler-vite": "link:@vuepress\\bundler-vite",
+    "cosmiconfig": "^7.1.0",
+    "path": "^0.12.7",
+    "typescript": "^5.0.2",
+    "utils": "link:@vuepress\\utils"
+  },
   "devDependencies": {
-    "@commitlint/cli": "12.1.4",
-    "@commitlint/config-conventional": "12.1.4",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@vue/repl": "^4.2.1",
     "@vuepress/bundler-vite": "^2.0.0-rc.14",
     "@vuepress/client": "^2.0.0-rc.14",
+    "@vuepress/plugin-back-to-top": "^2.0.0-rc.37",
     "@vuepress/plugin-docsearch": "^2.0.0-rc.37",
+    "@vuepress/plugin-notice": "^2.0.0-rc.28",
     "@vuepress/plugin-photo-swipe": "^2.0.0-rc.37",
     "@vuepress/plugin-search": "^2.0.0-rc.37",
+    "@vuepress/plugin-watermark": "^2.0.0-rc.37",
+    "chart.js": "^4.4.3",
     "cz-customizable": "6.3.0",
+    "echarts": "^5.5.1",
     "fast-glob": "^3.2.11",
+    "flowchart.ts": "^3.0.0",
     "husky": "^7.0.1",
     "lint-staged": "^9.5.0",
+    "markmap-common": "^0.17.0",
+    "markmap-lib": "^0.17.0",
+    "markmap-toolbar": "^0.17.0",
+    "markmap-view": "^0.17.0",
+    "mermaid": "^10.9.1",
     "pathe": "^1.0.0",
     "prettier": "^3.3.2",
+    "reveal.js": "^5.1.0",
+    "rimraf": "^5.0.7",
+    "sandpack-vue3": "^3.1.11",
     "vue": "^3.4.29",
     "vuepress": "^2.0.0-rc.14",
-    "vuepress-plugin-search-pro": "^2.0.0-rc.37",
-    "vuepress-theme-hope": "^2.0.0-rc.37"
+    "vuepress-plugin-md-enhance": "^2.0.0-rc.50",
+    "vuepress-plugin-search-pro": "^2.0.0-rc.50",
+    "vuepress-theme-hope": "^2.0.0-rc.50"
   },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.cjs"
     }
   },
   "gitHooks": {
@@ -48,13 +74,5 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "dependencies": {
-    "bundler-vite": "link:@vuepress\\bundler-vite",
-    "cosmiconfig": "^7.1.0",
-    "path": "^0.12.7",
-    "rimraf": "^5.0.1",
-    "typescript": "^5.0.2",
-    "utils": "link:@vuepress\\utils"
   }
 }

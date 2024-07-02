@@ -1,9 +1,7 @@
-import { sidebar } from "vuepress-theme-hope";
-import { getCatalogueByPath } from "../../utils/forMD";
-console.log(__dirname, "tests");
-export const zhSidebar = sidebar({
+import { sidebar } from "vuepress-theme-hope"
+import { getCatalogueByPath } from "../../utils/forMD"
+const zhSideBar = {
   "/zh/": [
-    "",
     /*
     {
       icon: 'typescript',
@@ -38,47 +36,49 @@ export const zhSidebar = sidebar({
         },
       ]
     },*/
-    getCatalogueByPath("zh/面试", {
-      cateIcon: "typescript",
-      isLink: true,
-      fileIcon: "blog",
-      collapsible: true,
-    }),
     getCatalogueByPath("zh/typescript", {
       cateIcon: "typescript",
       isLink: true,
-      fileIcon: "blog",
-      collapsible: true,
+      fileIcon: "Note",
+      collapsible: true
     }),
     getCatalogueByPath("zh/spring", {
-      cateIcon: "java-script",
+      cateIcon: "spring",
       isLink: true,
-      fileIcon: "blog",
-      collapsible: true,
+      fileIcon: "Note",
+      collapsible: true
     }),
     getCatalogueByPath("zh/node-js", {
-      cateIcon: "nodeJS",
+      cateIcon: "nodejs",
+      // cateIcon: "tip",
       isLink: true,
-      fileIcon: "blog",
+      fileIcon: "Note",
+      // fileIcon: "tip",
       collapsible: true,
+      expanded: true
     }),
-
-    {
-      icon: "discover", //项目图标
-      text: "案例", //项目文字
-      prefix: "demo/",
-      link: "demo/", //项目链接
-
-      collapsible: true, // 可选的, 设置分组是否可以折叠，默认值是 false,
-      children: "structure",
-    },
+    getCatalogueByPath("zh/面试", {
+      cateIcon: "interview",
+      isLink: true,
+      fileIcon: "Note",
+      collapsible: true
+    }),
+    // {
+    //   icon: "discover", //项目图标
+    //   text: "案例", //项目文字
+    //   prefix: "demo/",
+    //   link: "demo/", //项目链接
+    //   collapsible: true, // 可选的, 设置分组是否可以折叠，默认值是 false,
+    //   children: "structure",
+    // },
     {
       text: "文档",
-      icon: "note",
+      icon: "Note",
       prefix: "guide/",
       link: "guide/",
-      children: "structure",
+      children: "structure"
     },
-    "slides",
-  ],
-});
+    "slides"
+  ]
+}
+export const zhSidebar = sidebar(zhSideBar)

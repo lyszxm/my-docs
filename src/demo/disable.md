@@ -19,8 +19,6 @@ prev: false
 next: false
 comment: false
 footer: false
-
-backtotop: false
 ---
 
 You can disable some function and layout on the page by setting the Frontmatter of the page.

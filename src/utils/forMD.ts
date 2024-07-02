@@ -1,73 +1,99 @@
-import { resolve } from 'pathe'
-import fg from 'fast-glob' //https://github.com/mrmlnc/fast-glob#onlydirectories
+import { resolve } from "pathe"
+import fg from "fast-glob" //https://github.com/mrmlnc/fast-glob#onlydirectories
+
+type itemChildren = Array<item> | undefined | null
+type item = {
+  icon?: string
+  text?: string
+  prefix?: string // 'mk_ts/',
+  link?: string //给它就是可以点击了
+  collapsible?: boolean
+  expanded?: boolean
+  children?: itemChildren
+}
+
+const defaultItem: item = {}
+
+const srcPath = resolve(process.cwd(), "src")
 
 export function getCatalogueByPath(
   path: string,
-  tempObj = { isLink: true, cateIcon: '', fileIcon: '', collapsible: true }
+  {
+    isLink = true,
+    cateIcon = "",
+    fileIcon = "",
+    collapsible = true,
+    expanded = false
+  } = {}
 ) {
-  let result: any = {
-    icon: tempObj.cateIcon || '',
-    text: path.split('/')[1] || '',
-    prefix: path.split('/')[1] + '/' || '', // 'mk_ts/',
-    link: tempObj.isLink ? path.split('/')[1] + '/' : '', //给它就是可以点击了
-    collapsible: tempObj.collapsible,
-    children: []
+  const mdFileReg = /(.+)\.(md|MD)$/
+  let result = {
+    icon: cateIcon || "", //项目图标 (可选)
+    text: path.split("/")[1] || "",
+    prefix: path.split("/")[1] + "/" || "", // 'mk_ts/',
+    link: isLink ? path.split("/")[1] + "/" : "", //给它就是可以点击了 (项目链接)
+    collapsible,
+    expanded
   }
 
-  function diGui(path: string, val) {
+  function genChildren(item: item) {
+    if (item.children == null) {
+      return (item.children = [])
+    }
+    return item.children
+  }
+  function loop(path: string, val: item) {
     /*
     ! 不需要的文件可以命名有_ns的结尾
      */
-    let thisDir = fg.sync(['!*_ns', '*'], {
+    let thisDir = fg.sync(["*", "!*_ns"], {
       onlyDirectories: true,
-      cwd: resolve(__dirname, '../', path)
+      cwd: resolve(srcPath, path)
     })
-    let thisMd = fg.sync(['*.{md,MD}'], {
+    let thisMd = fg.sync(["*.{md,MD}"], {
       dot: true,
-      cwd: resolve(__dirname, '../', path)
+      cwd: resolve(srcPath, path)
     })
-    // console.log(val)
 
-    console.log('000000', path + `\t\t`, thisDir, thisMd)
-    // console.log(thisDir, '88', thisMd)
+    // console.log("---->>", path + `\t\t`, thisDir, thisMd)
 
     if (thisMd.length > 0) {
       for (let md of thisMd) {
-        if (md == 'README.md') continue
-        val.children.push({
-          icon: tempObj.fileIcon || '',
-          text: md.split(/([\w.\u4e00-\u9fa5]+)\.(md|MD)$/)[1] || '',
-          prefix: md.split(/([\w.\u4e00-\u9fa5]+)\.(md|MD)$/)[1] + '/' || '', // 'mk_ts/',
-          link: tempObj.isLink
-            ? md.split(/([\w.\u4e00-\u9fa5]+)\.(md|MD)$/)[1] + '/'
-            : '', //给它就是可以点击了
-          collapsible: tempObj.collapsible
-        })
+        if (md == "README.md") continue
+        const item: item = {
+          icon: fileIcon || "",
+          text: md.split(mdFileReg)[1] || "",
+          prefix: md.split(mdFileReg)[1] + "/" || "", // 'mk_ts/',
+          link: isLink ? md : "", //给它就是可以点击了
+          collapsible: collapsible,
+          expanded: expanded
+        }
+        genChildren(val).push(item)
       }
       // 如果你没有这个首页那么清除父亲的link项
-      if (!thisMd.includes('README.md' || 'README.MD')) {
-        val.link = ''
+      if (!thisMd.includes("README.md" || "README.MD")) {
+        val.link = ""
       }
     }
-    // 这是文件的
+    // 这是文件夹的
     if (thisDir.length > 0) {
-      for (let dir of thisDir) {
-        let temp = {
-          icon: tempObj.cateIcon || '',
-          text: dir || '',
-          prefix: dir + '/' || '', // 'mk_ts/',
-          link: tempObj.isLink ? dir + '/' : '', //给它就是可以点击了
-          collapsible: tempObj.collapsible,
-          children: []
+      for (const dir of thisDir) {
+        const item = {
+          icon: cateIcon || "",
+          text: dir || "",
+          prefix: dir + "/" || "", // 'mk_ts/',
+          link: isLink ? dir + "/" : "", //给它就是可以点击了
+          collapsible,
+          expanded
         }
-        val.children.push(temp)
-        diGui(path + `/${dir}`, temp)
+        genChildren(val).push(item)
+        loop(path + `/${dir}`, item)
       }
     } else {
       // console.log('我是最后面的')
       // console.log(val)
     }
   }
-  diGui(path, result)
+  loop(path, result)
   return result
 }

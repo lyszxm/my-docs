@@ -1,7 +1,7 @@
 ---
 title: Ray
 icon: config
-sidebar: heading
+sidebar: true
 ---
 # Test Page
 
