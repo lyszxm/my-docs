@@ -5,9 +5,9 @@
   "license": "MIT",
   "scripts": {
     "release": "release-it",
-    "build": "pnpm build:ts && vuepress-vite build src",
+    "build": "yarn build:ts && vuepress-vite build src NODE_ENV=production",
     "docs:clean-dev": "vuepress-vite dev src --clean-cache",
-    "dev": "vuepress-vite dev src",
+    "dev": "vuepress-vite dev src NODE_ENV=development",
     "docs:update-package": "npx vp-update",
     "prepare": "husky install",
     "deploy-gh": "yarn docs:build && bash scripts/deploy-gh.sh",
@@ -28,7 +28,6 @@
     "@commitlint/config-conventional": "^19.2.2",
     "@vue/repl": "^4.2.1",
     "@vuepress/bundler-vite": "^2.0.0-rc.14",
-    "@vuepress/client": "^2.0.0-rc.14",
     "@vuepress/plugin-back-to-top": "^2.0.0-rc.37",
     "@vuepress/plugin-docsearch": "^2.0.0-rc.37",
     "@vuepress/plugin-notice": "^2.0.0-rc.28",
@@ -52,11 +51,16 @@
     "reveal.js": "^5.1.0",
     "rimraf": "^5.0.7",
     "sandpack-vue3": "^3.1.11",
+    "terser": "^5.31.1",
     "vue": "^3.4.29",
     "vuepress": "^2.0.0-rc.14",
     "vuepress-plugin-md-enhance": "^2.0.0-rc.50",
     "vuepress-plugin-search-pro": "^2.0.0-rc.50",
     "vuepress-theme-hope": "^2.0.0-rc.50"
+  },
+  "engines": {
+    "node": ">=16.17",
+    "yarn": ">=1.22.19"
   },
   "config": {
     "commitizen": {

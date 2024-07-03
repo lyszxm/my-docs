@@ -23,8 +23,14 @@ export default defineUserConfig({
   },
   // public: `${sourceDir}/.vuepress/public`, //默认值： `${sourceDir}/.vuepress/public`  //指定 Public 文件目录。
   pagePatterns: ["**/*.md", "!.vuepress", "!node_modules"], //默认值： ['**/*.md', '!.vuepress', '!node_modules'] //指定页面文件的 Patterns 。这些 Patterns 是相对于 Source 目录的
+  // TODO:build有问题
+  // https://vuepress.vuejs.org/zh/reference/bundler/vite.html#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95
   bundler: viteBundler({
     viteOptions: {
+      define: {
+        __APP_VERSION__: JSON.stringify("v1.0.0"),
+        __API_URL__: "window.__backend_api_url"
+      },
       server: {
         host: "0.0.0.0",
         port: 7001

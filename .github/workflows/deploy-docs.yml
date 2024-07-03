@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           # 选择要使用的 node 版本
-          node-version: "16"
+          node-version: "20"
 
       - name: Set yarn --ignore-engines
         run: yarn config set ignore-engines true

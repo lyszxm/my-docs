@@ -12,10 +12,7 @@ type item = {
   children?: itemChildren
 }
 
-const defaultItem: item = {}
-
 const srcPath = resolve(process.cwd(), "src")
-
 export function getCatalogueByPath(
   path: string,
   {
